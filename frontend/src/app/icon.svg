@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Parchment background -->
+  <rect width="512" height="512" fill="#F5F0E8"/>
+
+  <!-- Stamp body -->
+  <rect x="40" y="40" width="432" height="432" fill="#B8382E"/>
+
+  <!-- Perforations: top edge -->
+  <circle cx="40"  cy="40" r="14" fill="#F5F0E8"/>
+  <circle cx="76"  cy="40" r="14" fill="#F5F0E8"/>
+  <circle cx="112" cy="40" r="14" fill="#F5F0E8"/>
+  <circle cx="148" cy="40" r="14" fill="#F5F0E8"/>
+  <circle cx="184" cy="40" r="14" fill="#F5F0E8"/>
+  <circle cx="220" cy="40" r="14" fill="#F5F0E8"/>
+  <circle cx="256" cy="40" r="14" fill="#F5F0E8"/>
+  <circle cx="292" cy="40" r="14" fill="#F5F0E8"/>
+  <circle cx="328" cy="40" r="14" fill="#F5F0E8"/>
+  <circle cx="364" cy="40" r="14" fill="#F5F0E8"/>
+  <circle cx="400" cy="40" r="14" fill="#F5F0E8"/>
+  <circle cx="436" cy="40" r="14" fill="#F5F0E8"/>
+  <circle cx="472" cy="40" r="14" fill="#F5F0E8"/>
+
+  <!-- Perforations: bottom edge -->
+  <circle cx="40"  cy="472" r="14" fill="#F5F0E8"/>
+  <circle cx="76"  cy="472" r="14" fill="#F5F0E8"/>
+  <circle cx="112" cy="472" r="14" fill="#F5F0E8"/>
+  <circle cx="148" cy="472" r="14" fill="#F5F0E8"/>
+  <circle cx="184" cy="472" r="14" fill="#F5F0E8"/>
+  <circle cx="220" cy="472" r="14" fill="#F5F0E8"/>
+  <circle cx="256" cy="472" r="14" fill="#F5F0E8"/>
+  <circle cx="292" cy="472" r="14" fill="#F5F0E8"/>
+  <circle cx="328" cy="472" r="14" fill="#F5F0E8"/>
+  <circle cx="364" cy="472" r="14" fill="#F5F0E8"/>
+  <circle cx="400" cy="472" r="14" fill="#F5F0E8"/>
+  <circle cx="436" cy="472" r="14" fill="#F5F0E8"/>
+  <circle cx="472" cy="472" r="14" fill="#F5F0E8"/>
+
+  <!-- Perforations: left edge (excluding corners) -->
+  <circle cx="40" cy="76"  r="14" fill="#F5F0E8"/>
+  <circle cx="40" cy="112" r="14" fill="#F5F0E8"/>
+  <circle cx="40" cy="148" r="14" fill="#F5F0E8"/>
+  <circle cx="40" cy="184" r="14" fill="#F5F0E8"/>
+  <circle cx="40" cy="220" r="14" fill="#F5F0E8"/>
+  <circle cx="40" cy="256" r="14" fill="#F5F0E8"/>
+  <circle cx="40" cy="292" r="14" fill="#F5F0E8"/>
+  <circle cx="40" cy="328" r="14" fill="#F5F0E8"/>
+  <circle cx="40" cy="364" r="14" fill="#F5F0E8"/>
+  <circle cx="40" cy="400" r="14" fill="#F5F0E8"/>
+  <circle cx="40" cy="436" r="14" fill="#F5F0E8"/>
+
+  <!-- Perforations: right edge (excluding corners) -->
+  <circle cx="472" cy="76"  r="14" fill="#F5F0E8"/>
+  <circle cx="472" cy="112" r="14" fill="#F5F0E8"/>
+  <circle cx="472" cy="148" r="14" fill="#F5F0E8"/>
+  <circle cx="472" cy="184" r="14" fill="#F5F0E8"/>
+  <circle cx="472" cy="220" r="14" fill="#F5F0E8"/>
+  <circle cx="472" cy="256" r="14" fill="#F5F0E8"/>
+  <circle cx="472" cy="292" r="14" fill="#F5F0E8"/>
+  <circle cx="472" cy="328" r="14" fill="#F5F0E8"/>
+  <circle cx="472" cy="364" r="14" fill="#F5F0E8"/>
+  <circle cx="472" cy="400" r="14" fill="#F5F0E8"/>
+  <circle cx="472" cy="436" r="14" fill="#F5F0E8"/>
+
+  <!-- Inner white frame -->
+  <rect x="72" y="72" width="368" height="368" fill="none" stroke="white" stroke-width="8"/>
+
+  <!-- Envelope body -->
+  <rect x="136" y="170" width="240" height="172" fill="none" stroke="white" stroke-width="12" rx="4"/>
+
+  <!-- Envelope flap (V shape) -->
+  <polyline points="136,170 256,262 376,170" fill="none" stroke="white" stroke-width="12" stroke-linejoin="round"/>
+
+  <!-- Envelope bottom fold lines -->
+  <line x1="136" y1="342" x2="222" y2="274" stroke="white" stroke-width="10" stroke-linecap="round"/>
+  <line x1="376" y1="342" x2="290" y2="274" stroke="white" stroke-width="10" stroke-linecap="round"/>
+</svg>

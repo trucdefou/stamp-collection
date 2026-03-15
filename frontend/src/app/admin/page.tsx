@@ -47,7 +47,7 @@ function StampForm({
   }
 
   return (
-    <form onSubmit={handleSubmit} className="bg-white/60 border border-sepia-200 rounded-sm p-6">
+    <form onSubmit={handleSubmit} className="border border-black/[0.06] rounded-sm p-6">
       <h2 className="font-display text-lg font-bold text-ink-800 mb-5">
         {initial ? "Editar Estampilla" : "Nueva Estampilla"}
       </h2>
@@ -197,7 +197,7 @@ export default function AdminPage() {
       {/* Header */}
       <div className="flex items-center justify-between mb-8">
         <div>
-          <h1 className="font-display text-2xl font-bold text-ink-800">Panel de Administración</h1>
+          <h1 className="font-display text-2xl font-bold text-cream">Panel de Administración</h1>
           <p className="text-sm text-ink-400 italic">Gestión del catálogo filatélico</p>
         </div>
         <div className="flex gap-3">
@@ -207,7 +207,7 @@ export default function AdminPage() {
           >
             + Nueva Estampilla
           </button>
-          <button onClick={handleLogout} className="px-4 py-2 text-sm border border-sepia-200 rounded-sm text-ink-500 hover:bg-sepia-50 transition-colors">
+          <button onClick={handleLogout} className="px-4 py-2 text-sm bg-stamp-burgundy hover:bg-stamp-red text-cream rounded-sm font-semibold transition-colors">
             Cerrar Sesión
           </button>
         </div>
@@ -216,20 +216,20 @@ export default function AdminPage() {
       {/* Stats */}
       {stats && (
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-          <div className="bg-white/60 border border-sepia-200 rounded-sm px-4 py-3 text-center">
+          <div className="border border-black/[0.06] rounded-sm px-4 py-3 text-center" style={{ backgroundColor: "rgb(248 244 237)" }}>
             <p className="text-xl font-display font-bold text-ink-800">{stats.total_stamps}</p>
             <p className="text-[10px] text-ink-400 uppercase tracking-wider">Estampillas</p>
           </div>
-          <div className="bg-white/60 border border-sepia-200 rounded-sm px-4 py-3 text-center">
+          <div className="border border-black/[0.06] rounded-sm px-4 py-3 text-center" style={{ backgroundColor: "rgb(248 244 237)" }}>
             <p className="text-xl font-display font-bold text-ink-800">{stats.total_countries}</p>
             <p className="text-[10px] text-ink-400 uppercase tracking-wider">Países</p>
           </div>
-          <div className="bg-white/60 border border-sepia-200 rounded-sm px-4 py-3 text-center">
-            <p className="text-xl font-display font-bold text-stamp-gold">${stats.total_estimated_value.toLocaleString()}</p>
+          <div className="border border-black/[0.06] rounded-sm px-4 py-3 text-center" style={{ backgroundColor: "rgb(248 244 237)" }}>
+            <p className="text-xl font-display font-bold text-stamp-gold">₲{stats.total_estimated_value.toLocaleString()}</p>
             <p className="text-[10px] text-ink-400 uppercase tracking-wider">Valor Total</p>
           </div>
-          <div className="bg-white/60 border border-sepia-200 rounded-sm px-4 py-3 text-center">
-            <p className="text-xl font-display font-bold text-ink-800">${stats.total_invested.toLocaleString()}</p>
+          <div className="border border-black/[0.06] rounded-sm px-4 py-3 text-center" style={{ backgroundColor: "rgb(248 244 237)" }}>
+            <p className="text-xl font-display font-bold text-ink-800">₲{stats.total_invested.toLocaleString()}</p>
             <p className="text-[10px] text-ink-400 uppercase tracking-wider">Invertido</p>
           </div>
         </div>
@@ -263,7 +263,7 @@ export default function AdminPage() {
           <div className="inline-block w-8 h-8 border-2 border-sepia-300 border-t-stamp-gold rounded-full animate-spin" />
         </div>
       ) : (
-        <div className="bg-white/60 border border-sepia-200 rounded-sm overflow-hidden">
+        <div className="border border-black/[0.06] rounded-sm overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
@@ -285,9 +285,9 @@ export default function AdminPage() {
                     </td>
                   </tr>
                 ) : stamps.map((stamp) => (
-                  <tr key={stamp.id} className="border-b border-sepia-100 hover:bg-sepia-50/30 transition-colors">
+                  <tr key={stamp.id} className="border-b border-black/[0.06] transition-colors" style={{ backgroundColor: "rgb(248 244 237)" }}>
                     <td className="px-4 py-2.5">
-                      <div className="w-8 h-10 rounded-sm overflow-hidden bg-sepia-100 border border-sepia-200">
+                      <div className="w-8 h-10 rounded-sm overflow-hidden border border-black/10" style={{ backgroundColor: "rgb(235 230 220)" }}>
                         {stamp.image_filename ? (
                           <img src={imageUrl(stamp.image_filename)} alt="" className="w-full h-full object-cover" />
                         ) : (
@@ -304,7 +304,7 @@ export default function AdminPage() {
                       ) : "—"}
                     </td>
                     <td className="px-4 py-2.5 text-right font-mono text-stamp-gold">
-                      {stamp.estimated_value != null ? `$${stamp.estimated_value.toLocaleString()}` : "—"}
+                      {stamp.estimated_value != null ? `₲${stamp.estimated_value.toLocaleString()}` : "—"}
                     </td>
                     <td className="px-4 py-2.5 text-right">
                       <button
