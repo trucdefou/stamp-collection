@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  basePath: "/stamp-collection",
+  assetPrefix: "/stamp-collection",
   images: {
     remotePatterns: [
       { protocol: "http", hostname: "localhost", port: "8000" },

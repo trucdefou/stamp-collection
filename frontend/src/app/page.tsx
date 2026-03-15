@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect, useCallback } from "react";
+import Link from "next/link";
 import { getStamps, getFilters, imageUrl, type Stamp, type Filters } from "@/lib/api";
 
 /* Decorative stamp outline for hero watermark */
@@ -23,7 +24,7 @@ function StampWatermark() {
 function StampCard({ stamp }: { stamp: Stamp }) {
   const subtitle = [stamp.country, stamp.year].filter(Boolean).join(" · ");
   return (
-    <a href={`/stamp/${stamp.id}`} className="work-entry block">
+    <Link href={`/stamp/${stamp.id}`} className="work-entry block">
       {/* Perforated stamp border (cream paper) */}
       <div className="stamp-border">
         {/* Image with hover overlay inside */}
@@ -61,7 +62,7 @@ function StampCard({ stamp }: { stamp: Stamp }) {
           {subtitle && <p className="stamp-label-sub">{subtitle}</p>}
         </div>
       </div>
-    </a>
+    </Link>
   );
 }
 

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -38,7 +39,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Navigation */}
         <header className="border-b border-white/[0.06] py-5">
           <div className="max-w-7xl mx-auto px-8 flex items-center justify-between">
-            <a href="/" className="flex items-center gap-3 group">
+            <Link href="/" className="flex items-center gap-3 group">
               <div className="w-9 h-9 group-hover:rotate-[-5deg] group-hover:scale-110 transition-all duration-300">
                 <StampSvg />
               </div>
@@ -48,21 +49,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 </span>
                 <span className="text-[10px] text-cream-muted uppercase tracking-widest font-semibold">Paraguay</span>
               </div>
-            </a>
+            </Link>
 
             <nav className="flex items-center gap-1">
-              <a href="/" className="text-cream-dim text-sm font-semibold px-4 py-2 hover:text-gold transition-colors">
+              <Link href="/" className="text-cream-dim text-sm font-semibold px-4 py-2 hover:text-gold transition-colors">
                 Home
-              </a>
+              </Link>
               <a href="#contacto" className="text-cream-dim text-sm font-semibold px-4 py-2 hover:text-gold transition-colors">
                 Contacto
               </a>
-              <a href="/admin" title="Administración" className="ml-4 text-cream-muted hover:text-gold transition-colors p-2 border border-white/10 hover:border-gold/40">
+              <Link href="/admin" title="Administración" className="ml-4 text-cream-muted hover:text-gold transition-colors p-2 border border-white/10 hover:border-gold/40">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
-              </a>
+              </Link>
             </nav>
           </div>
         </header>

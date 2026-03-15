@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { getStamp, imageUrl, type Stamp } from "@/lib/api";
 import { useParams } from "next/navigation";
+import Link from "next/link";
 
 function InfoRow({ label, value }: { label: string; value: React.ReactNode }) {
   if (!value) return null;
@@ -54,9 +55,9 @@ export default function StampDetailPage() {
 
   return (
     <div className="max-w-4xl mx-auto px-8 py-10 fade-up">
-      <a href="/" className="inline-flex items-center gap-2 text-xs text-cream-muted hover:text-gold transition-colors mb-10 font-bold uppercase tracking-widest">
+      <Link href="/" className="inline-flex items-center gap-2 text-xs text-cream-muted hover:text-gold transition-colors mb-10 font-bold uppercase tracking-widest">
         ← Volver
-      </a>
+      </Link>
 
       <div className="grid md:grid-cols-2 gap-10">
         {/* Image */}
