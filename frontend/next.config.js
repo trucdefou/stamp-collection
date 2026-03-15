@@ -2,7 +2,6 @@
 const nextConfig = {
   basePath: "/stamp-collection",
   assetPrefix: "/stamp-collection",
-  trailingSlash: true,
   images: {
     remotePatterns: [
       { protocol: "http", hostname: "localhost", port: "8000" },
