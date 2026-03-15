@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,400&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { box-sizing: border-box; }
+
+body {
+  background-color: #F5F0E8;
+  color: #231F19;
+}
+
+/* Stamp perforation border effect */
+.stamp-border {
+  background:
+    radial-gradient(circle, #F5F0E8 4px, transparent 4px) -6px -6px / 16px 16px repeat-x,
+    radial-gradient(circle, #F5F0E8 4px, transparent 4px) -6px calc(100% + 6px) / 16px 16px repeat-x,
+    radial-gradient(circle, #F5F0E8 4px, transparent 4px) -6px -6px / 16px 16px repeat-y,
+    radial-gradient(circle, #F5F0E8 4px, transparent 4px) calc(100% + 6px) -6px / 16px 16px repeat-y;
+  padding: 16px;
+  background-color: white;
+}
+
+.stamp-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.stamp-card:hover {
+  transform: translateY(-4px) rotate(-0.5deg);
+  box-shadow: 0 12px 40px rgba(58, 47, 24, 0.2);
+}
+
+/* Decorative divider */
+.ornament::after {
+  content: "❧";
+  display: block;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #BFA05A;
+  margin: 1.5rem 0;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #F5EDD8; }
+::-webkit-scrollbar-thumb { background: #D4BC82; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #BFA05A; }
+
+/* Input styling */
+input, select, textarea {
+  font-family: 'Source Serif 4', Georgia, serif;
+}
+
+/* Fade-in animation */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-up {
+  animation: fadeUp 0.5s ease forwards;
+}
+.fade-up-delay-1 { animation-delay: 0.1s; opacity: 0; }
+.fade-up-delay-2 { animation-delay: 0.2s; opacity: 0; }
+.fade-up-delay-3 { animation-delay: 0.3s; opacity: 0; }
