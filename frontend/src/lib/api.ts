@@ -1,4 +1,4 @@
-const API_BASE = "";
+const API_BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export interface Stamp {
   id: number;
